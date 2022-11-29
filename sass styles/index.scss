@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$Blue: hsl(246, 80%, 60%);
+$Lightred-work: hsl(15, 100%, 70%);
+$Softblue-play: hsl(195, 74%, 62%);
+$Light-red-study: hsl(348, 100%, 68%);
+$Lime-green-exercise: hsl(145, 58%, 55%);
+$Violet-social: hsl(264, 64%, 52%);
+$Soft-orange-self-care: hsl(43, 84%, 65%);
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+$font-family: Rubik, sans-serif;
+$font-size: 1em;
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $Very-dark-blue;
+  padding: 2em;
+  color: white;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.left-section {
+  height: auto;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: $Dark-blue;
+
+  .days {
+    color: $Desaturated-blue;
+  }
+
+  .active-white {
+    color: white;
+  }
+
+  .left-article-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $Blue;
+    padding: 1.5em 2em;
+    border-radius: 1em;
+
+    .bio {
+      margin-left: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-transform: capitalize;
+
+      .report {
+        font-size: 1em;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: $Pale-Blue;
+      }
+
+      .name {
+        font-size: 1.4em;
+      }
+    }
+
+    .bio > * {
+      margin-bottom: 0.2em;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  .jeremy {
+    img {
+      height: 4.5em;
+      border: 3px solid white;
+      border-radius: 50%;
+    }
+  }
+
+  .left-article-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em 1em;
+    text-transform: capitalize;
+    font-family: $font-family;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+    cursor: pointer;
+  }
+}
+
+.right {
+  margin: 2em 0;
+}
+
+.right-section {
+  margin: 0 0 6.5em 0;
+  background-color: $Dark-blue;
+  position: relative;
+  border-radius: 1em;
+  height: fit-content;
+
+  .right-article-1 {
+    padding: 0 1em 0 0;
+    text-align: right;
+    border-radius: 1em 1em 0 0;
+    // background-color: $Lightred-work;
+  }
+
+  .right-article-2 {
+    padding: 1.5em 1.5em;
+    border-radius: 1em;
+    background-color: $Dark-blue;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+
+    :is(.div-1, .div-2) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.2em 0;
+      text-transform: capitalize;
+    }
+
+    .work {
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .dots {
+      cursor: pointer;
+    }
+
+    .hours {
+      font-weight: 300;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    .last-week {
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      cursor: pointer;
+      color: $Pale-Blue;
+    }
+  }
+}
+
+@media screen and (min-width: 45.5em) {
+  .main {
+    font-size: 1.2em;
+  }
+  .container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .main {
+    font-size: 1.4em;
+  }
+
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
+  .main {
+    font-size: 0.75em;
+    height: 100vh;
+    width: 100%;
+    padding: 0em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    height: fit-content;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 2em;
+    // background-color: red;
+  }
+
+  .right {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    column-gap: 1.8em;
+    row-gap: 2em;
+
+    .right-section {
+      flex: 1 1 14em;
+      font-size: 1.1em;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      .right-article-1 {
+        text-align: right;
+        position: absolute;
+        background-color: yellow;
+        font-size: 1.2em;
+        height: fit-content;
+        padding: 0em 1em 1em 0;
+        width: 100%;
+      }
+
+      .right-article-2 {
+        position: absolute;
+        top: 3em;
+        font-size: 1.1em;
+        height: fit-content;
+        padding: 2em 2em;
+
+        .div-2 {
+          display: block;
+          margin: 0.7em 0;
+
+          .hours {
+            font-size: 3.5em;
+          }
+
+          .last-week {
+            margin: 0.5em 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .left {
+    // background-color: yellow;
+    display: flex;
+
+    .left-article-1 {
+      display: block;
+      padding: 1em 0 1em 1em;
+      height: 65%;
+      font-size: 1.3em;
+
+      .bio {
+        .report {
+          margin: 1em 0;
+          font-size: 0.9em;
+        }
+
+        .name {
+          font-size: 3em;
+        }
+      }
+    }
+
+    .left-article-1 > * {
+      margin: 1em 0;
+    }
+
+    .left-article-2 {
+      display: block;
+      padding: 1em 0 1em 1em;
+      font-size: 1.5em;
+      height: 100%;
+    }
+
+    .left-article-2 > * {
+      margin: 1em 0;
+    }
+  }
+}
+
+@media screen and (min-width: 120em) {
+  .main {
+    font-size: 1em;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
