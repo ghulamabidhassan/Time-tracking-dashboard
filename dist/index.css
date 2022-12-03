@@ -36,12 +36,6 @@ body {
   overflow: hidden;
   background-color: hsl(235deg, 46%, 20%);
 }
-.left-section .days {
-  color: hsl(235deg, 45%, 61%);
-}
-.left-section .active-white {
-  color: white;
-}
 .left-section .left-article-1 {
   display: flex;
   justify-content: flex-start;
@@ -93,6 +87,13 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: hsl(235deg, 45%, 61%);
+}
+.left-section .left-article-2 > *:hover {
+  opacity: 0.7;
+}
+.left-section .left-article-2 .active-white {
+  color: white;
 }
 
 .right {
@@ -141,12 +142,18 @@ body {
   font-weight: 300;
   font-size: 2em;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .right-section .right-article-2 .last-week {
   font-size: 0.9em;
   letter-spacing: 1px;
   cursor: pointer;
   color: hsl(236deg, 100%, 87%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media screen and (min-width: 45.5em) {
